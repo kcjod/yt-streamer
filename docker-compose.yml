@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/home/app
+    ports:
+      - "3000:3000"
+    environment:
+      - RTMP_KEY=your_rtmp_key
+      - PORT=3000
